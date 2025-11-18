@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
 import { cores } from '../../styles'
 
-export const ButtonLink = styled.a`
+export const ButtonLink = styled(Link)`
   border: 2px solid ${cores.salmon};
   background-color: ${cores.salmon};
   padding: 6px 10px;

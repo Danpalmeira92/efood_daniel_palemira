@@ -10,7 +10,7 @@ export const HeaderBar = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 400px;
+  height: 320px;
   padding: 24px 0;
 `
 

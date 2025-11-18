@@ -1,5 +1,6 @@
 import { Estrela } from '../Avaliacao/styles'
 import { ButtonLink } from '../Button/styles'
+
 import Tag from '../Tag'
 
 import { Card, Descricao, Titulo, Infos, LinhaTitulo } from './styles'
@@ -36,7 +37,7 @@ const Product = ({
     </LinhaTitulo>
 
     <Descricao>{description}</Descricao>
-    <ButtonLink>Saiba mais</ButtonLink>
+    <ButtonLink to="/categories">Saiba mais</ButtonLink>
   </Card>
 )
 

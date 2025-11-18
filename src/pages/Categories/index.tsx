@@ -80,7 +80,6 @@ const promocoes: Game[] = [
 const Categories = () => (
   <>
     <ProductsList games={promocoes} title="RPG" background="gray" />
-    <ProductsList games={promocoes} title="Aventura" background="gray" />
   </>
 )
 
