@@ -14,7 +14,7 @@ const promocoes: Game[] = [
 
     description:
       'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
+    title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
     image: resident,
@@ -25,7 +25,7 @@ const promocoes: Game[] = [
 
     description:
       'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
+    title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
     image: diablo,
@@ -36,7 +36,7 @@ const promocoes: Game[] = [
 
     description:
       'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
+    title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
     image: zelda,
@@ -47,7 +47,7 @@ const promocoes: Game[] = [
 
     description:
       'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
+    title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
     image: starWars,
@@ -58,7 +58,7 @@ const promocoes: Game[] = [
 
     description:
       'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
+    title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
     image: starWars,
@@ -79,7 +79,14 @@ const promocoes: Game[] = [
 
 const Categories = () => (
   <>
-    <ProductsList games={promocoes} title="RPG" background="gray" />
+    <ProductsList
+      games={promocoes}
+      title="RPG"
+      background="gray"
+      showInfos={false}
+      showEstrela={false}
+      variant={'categories'}
+    />
   </>
 )
 

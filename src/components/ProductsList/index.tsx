@@ -7,13 +7,23 @@ export type Props = {
   title: string
   background: 'gray' | 'black'
   games: Game[]
+  showInfos?: boolean
+  showEstrela?: boolean
+  variant?: 'default' | 'categories'
 }
 
-export const ProductsList = ({ background, title, games }: Props) => (
-  <Container background={background}>
+export const ProductsList = ({
+  background,
+  title,
+  games,
+  showInfos = true,
+  showEstrela = true,
+  variant = 'default'
+}: Props) => (
+  <Container background={background} variant={variant}>
     <div className="container">
       <h2>{title}</h2>
-      <List>
+      <List variant={variant}>
         {games.map((game) => (
           <Product
             key={game.id}
@@ -22,6 +32,9 @@ export const ProductsList = ({ background, title, games }: Props) => (
             infos={game.infos}
             title={game.title}
             button={game.button}
+            showInfos={showInfos}
+            showEstrela={showEstrela}
+            variant={variant}
           />
         ))}
       </List>

@@ -7,33 +7,42 @@ import { Card, Descricao, Titulo, Infos, LinhaTitulo } from './styles'
 
 import estrela from '../../assets/images/estrela.png'
 
-type Props = {
+export type Props = {
   title: string
   description: string
   infos: string[]
   image: string
   button: string
+  showInfos?: boolean
+  showEstrela?: boolean
+  variant?: 'default' | 'categories'
 }
 
 const Product = ({
   title,
-
   description,
   infos,
-  image
+  image,
+  showInfos = true,
+  showEstrela = true,
+  variant = 'default'
 }: Props) => (
-  <Card>
+  <Card variant={variant}>
     <img src={image} alt={title} />
-    <Infos>
-      {infos.map((info) => (
-        <Tag key={info}>{info}</Tag>
-      ))}
-    </Infos>
-    <LinhaTitulo>
-      <Titulo>{title}</Titulo>
-      <Estrela>
-        4.6 <img src={estrela} alt="estrela" />
-      </Estrela>
+    {showInfos && (
+      <Infos>
+        {infos.map((info) => (
+          <Tag key={info}>{info}</Tag>
+        ))}
+      </Infos>
+    )}
+    <LinhaTitulo variant={variant}>
+      <Titulo variant={variant}>{title}</Titulo>
+      {showEstrela && (
+        <Estrela>
+          4.6 <img src={estrela} alt="estrela" />
+        </Estrela>
+      )}
     </LinhaTitulo>
 
     <Descricao>{description}</Descricao>

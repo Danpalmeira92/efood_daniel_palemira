@@ -13,17 +13,35 @@ export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
     background-color: ${cores.cinza};
     border: 1px solid;
   }
+
+  ${(props) =>
+    props.variant === 'categories' &&
+    `
+    ${Card} {
+    background-color: ${cores.salmon};
+    border: 1px solid;
+    color: ${cores.cinza};
+  }
+  `}
 `
 
-export const List = styled.ul`
+export const List = styled.ul<{ variant?: Props['variant'] }>`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 48px;
   row-gap: 40px;
   margin-top: 40px;
+
+  ${(props) =>
+    props.variant === 'categories' &&
+    `
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 40px;
+      row-gap: 36px;
+      `}
 `
 
-export const Title = styled.h2`
+export const Title = styled.h2<{ variant?: Props['variant'] }>`
   font-size: 18px;
   font-weight: bold;
 `
