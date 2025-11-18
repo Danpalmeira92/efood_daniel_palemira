@@ -11,6 +11,10 @@ export const Card = styled.div`
   ${TagContainer} {
     margin-right: 8px;
   }
+
+  img {
+    border-radius: 6px;
+  }
 `
 
 export const Titulo = styled.h3`
@@ -26,9 +30,17 @@ export const Descricao = styled.p`
   line-height: 22px;
   display: block;
   margin-top: 16px;
+  margin-bottom: 16px;
 `
 export const Infos = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
+`
+export const LinhaTitulo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* controla o espaço */
+  margin-top: 16px;
+  margin-bottom: 8px;
 `

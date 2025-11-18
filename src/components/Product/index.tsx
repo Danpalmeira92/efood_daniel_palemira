@@ -1,20 +1,22 @@
+import { Estrela } from '../Avaliacao/styles'
+import { ButtonLink } from '../Button/styles'
 import Tag from '../Tag'
 
-import { Card, Descricao, Titulo, Infos } from './styles'
+import { Card, Descricao, Titulo, Infos, LinhaTitulo } from './styles'
+
+import estrela from '../../assets/images/estrela.png'
 
 type Props = {
   title: string
-  category: string
-  system: string
   description: string
   infos: string[]
   image: string
+  button: string
 }
 
 const Product = ({
   title,
-  category,
-  system,
+
   description,
   infos,
   image
@@ -26,10 +28,15 @@ const Product = ({
         <Tag key={info}>{info}</Tag>
       ))}
     </Infos>
-    <Titulo>{title}</Titulo>
-    <Tag>{category}</Tag>
-    <Tag>{system}</Tag>
+    <LinhaTitulo>
+      <Titulo>{title}</Titulo>
+      <Estrela>
+        4.6 <img src={estrela} alt="estrela" />
+      </Estrela>
+    </LinhaTitulo>
+
     <Descricao>{description}</Descricao>
+    <ButtonLink>Saiba mais</ButtonLink>
   </Card>
 )
 

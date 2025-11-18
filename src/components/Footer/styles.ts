@@ -2,13 +2,13 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Container = styled.footer`
-  background-color: ${cores.cinza};
+  background-color: ${cores.begeClaro};
   padding: 32px 0;
   font-size: 14px;
 `
 
 export const SectionTitle = styled.h4`
-  color: ${cores.branca};
+  color: ${cores.salmon};
   font-size: 16px;
   font-weight: bold;
 `

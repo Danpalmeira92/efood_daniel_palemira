@@ -17,12 +17,11 @@ export const ProductsList = ({ background, title, games }: Props) => (
         {games.map((game) => (
           <Product
             key={game.id}
-            category={game.category}
             description={game.description}
             image={game.image}
             infos={game.infos}
-            system={game.system}
             title={game.title}
+            button={game.button}
           />
         ))}
       </List>

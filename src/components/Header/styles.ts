@@ -1,25 +1,24 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
+import bgImage from '../../assets/images/fundo.png'
+
 export const HeaderBar = styled.header`
-  background-color: ${cores.cinza};
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 80px;
+  background-image: url(${bgImage});
+  margin-top: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  height: 400px;
+  padding: 24px 0;
+`
 
-  a {
-    color: ${cores.branca};
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  div {
-    display: flex;
-    align-items: center;
-  }
+export const TextoBanner = styled.p`
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
 `
 
 export const Links = styled.ul`
