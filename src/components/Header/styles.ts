@@ -2,8 +2,10 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 import bgImage from '../../assets/images/fundo.png'
+import bgVariant from '../../assets/images/apresentacao.png'
+import { Props } from '.'
 
-export const HeaderBar = styled.header`
+export const HeaderBar = styled.header<{ variant?: Props['variant'] }>`
   background-image: url(${bgImage});
   margin-top: 0;
   display: flex;
@@ -12,6 +14,39 @@ export const HeaderBar = styled.header`
   justify-content: space-between;
   height: 320px;
   padding: 24px 0;
+
+  ${(props) =>
+    props.variant === 'categories' &&
+    `
+      height: 160px;
+      `}
+`
+
+export const VariantBanner = styled.div`
+  width: 100%;
+  height: 280px;
+  background-image: url(${bgVariant});
+  background-size: cover;
+  background-position: center;
+`
+export const VariantHeaderTexto = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `
 
 export const TextoBanner = styled.p`

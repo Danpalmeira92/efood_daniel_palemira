@@ -1,87 +1,88 @@
 import { ProductsList } from '../../components/ProductsList'
 import Game from '../../models/Game'
 
-import resident from '../../assets/images/resident.png'
-import diablo from '../../assets/images/diablo.png'
-import zelda from '../../assets/images/zelda.png'
-import starWars from '../../assets/images/star_wars.png'
+import pizza from '../../assets/images/pizza.png'
 import { ButtonLink } from '../../components/Button/styles'
 import { Estrela } from '../../components/Avaliacao/styles'
+import Header from '../../components/Header'
+import { VariantBanner } from '../../components/Header/styles'
 
 const promocoes: Game[] = [
   {
     id: 1,
 
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
-    image: resident,
+    image: pizza,
     button: ButtonLink
   },
   {
     id: 2,
 
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
-    image: diablo,
+    image: pizza,
     button: ButtonLink
   },
   {
     id: 3,
 
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
-    image: zelda,
+    image: pizza,
     button: ButtonLink
   },
   {
     id: 4,
 
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
-    image: starWars,
+    image: pizza,
     button: ButtonLink
   },
   {
     id: 5,
 
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
-    image: starWars,
+    image: pizza,
     button: ButtonLink
   },
   {
     id: 6,
 
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
     avaliacao: Estrela,
     infos: ['-10%', 'R$ 250,00'],
-    image: starWars,
+    image: pizza,
     button: ButtonLink
   }
 ]
 
 const Categories = () => (
   <>
+    <Header showTexto={false} variant={'categories'} />
+    <VariantBanner />
     <ProductsList
       games={promocoes}
-      title="RPG"
+      title=""
       background="gray"
       showInfos={false}
       showEstrela={false}

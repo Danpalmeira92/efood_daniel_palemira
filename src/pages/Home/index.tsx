@@ -4,6 +4,7 @@ import Game from '../../models/Game'
 import pratos from '../../assets/images/pratos.png'
 import { ButtonLink } from '../../components/Button/styles'
 import { Estrela } from '../../components/Avaliacao/styles'
+import Header from '../../components/Header'
 
 const promocoes: Game[] = [
   {
@@ -75,6 +76,7 @@ const promocoes: Game[] = [
 
 const Home = () => (
   <>
+    <Header showTexto={true} />
     <ProductsList games={promocoes} title="" background="gray" />
   </>
 )
