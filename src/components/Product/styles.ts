@@ -29,15 +29,23 @@ export const Titulo = styled.h3<{ variant?: Props['variant'] }>`
     props.variant === 'categories' &&
     `
       color: ${cores.cinza};
+      margin-top: 2px;
+      margin-bottom: 2px;
       `}
 `
 
-export const Descricao = styled.p`
+export const Descricao = styled.p<{ variant?: Props['variant'] }>`
   font-size: 14px;
   line-height: 22px;
   display: block;
   margin-top: 16px;
   margin-bottom: 16px;
+
+  ${(props) =>
+    props.variant === 'categories' &&
+    `
+      margin-top: 0;
+      `}
 `
 export const Infos = styled.div`
   position: absolute;
@@ -50,4 +58,12 @@ export const LinhaTitulo = styled.div<{ variant?: Props['variant'] }>`
   justify-content: space-between; /* controla o espaço */
   margin-top: 16px;
   margin-bottom: 8px;
+
+  ${(props) =>
+    props.variant === 'categories' &&
+    `
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+      `}
 `

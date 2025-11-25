@@ -1,5 +1,6 @@
-import { ButtonLink } from './styles'
+import { ButtonLink, ButtonLinkVariant } from './styles'
 
-const Button = () => <ButtonLink to="/categories">Saiba mais</ButtonLink>
-
-export default Button
+export const Button = () => <ButtonLink to="/categories">Saiba mais</ButtonLink>
+export const ButtonVariant = () => (
+  <ButtonLinkVariant to="">Adicionar ao carrinho</ButtonLinkVariant>
+)

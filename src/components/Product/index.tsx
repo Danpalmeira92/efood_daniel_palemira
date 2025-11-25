@@ -1,5 +1,5 @@
 import { Estrela } from '../Avaliacao/styles'
-import { ButtonLink } from '../Button/styles'
+import { ButtonLink, ButtonLinkVariant } from '../Button/styles'
 
 import Tag from '../Tag'
 
@@ -46,7 +46,12 @@ const Product = ({
     </LinhaTitulo>
 
     <Descricao>{description}</Descricao>
-    <ButtonLink to="/categories">Saiba mais</ButtonLink>
+
+    {variant === 'categories' ? (
+      <ButtonLinkVariant to="">Adicionar ao carrinho</ButtonLinkVariant>
+    ) : (
+      <ButtonLink to="/categories">Saiba mais</ButtonLink>
+    )}
   </Card>
 )
 

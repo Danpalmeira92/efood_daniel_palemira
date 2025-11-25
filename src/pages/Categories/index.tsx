@@ -1,13 +1,12 @@
 import { ProductsList } from '../../components/ProductsList'
-import Game from '../../models/Game'
+import Prato from '../../models/Pratos'
 
 import pizza from '../../assets/images/pizza.png'
 import { ButtonLink } from '../../components/Button/styles'
 import { Estrela } from '../../components/Avaliacao/styles'
 import Header from '../../components/Header'
-import { VariantBanner } from '../../components/Header/styles'
 
-const promocoes: Game[] = [
+const cardapio: Prato[] = [
   {
     id: 1,
 
@@ -79,9 +78,8 @@ const promocoes: Game[] = [
 const Categories = () => (
   <>
     <Header showTexto={false} variant={'categories'} />
-    <VariantBanner />
     <ProductsList
-      games={promocoes}
+      pratos={cardapio}
       title=""
       background="gray"
       showInfos={false}

@@ -1,12 +1,12 @@
 import { ProductsList } from '../../components/ProductsList'
-import Game from '../../models/Game'
+import Prato from '../../models/Pratos'
 
 import pratos from '../../assets/images/pratos.png'
 import { ButtonLink } from '../../components/Button/styles'
 import { Estrela } from '../../components/Avaliacao/styles'
 import Header from '../../components/Header'
 
-const promocoes: Game[] = [
+const cardapio: Prato[] = [
   {
     id: 1,
     description:
@@ -77,7 +77,7 @@ const promocoes: Game[] = [
 const Home = () => (
   <>
     <Header showTexto={true} />
-    <ProductsList games={promocoes} title="" background="gray" />
+    <ProductsList pratos={cardapio} title="" background="gray" />
   </>
 )
 

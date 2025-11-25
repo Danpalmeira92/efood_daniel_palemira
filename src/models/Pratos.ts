@@ -1,4 +1,4 @@
-class Game {
+class Prato {
   description: string
   image: string
   infos: string[]
@@ -26,4 +26,4 @@ class Game {
   }
 }
 
-export default Game
+export default Prato

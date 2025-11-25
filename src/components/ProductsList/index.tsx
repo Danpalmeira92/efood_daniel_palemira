@@ -1,4 +1,4 @@
-import Game from '../../models/Game'
+import Prato from '../../models/Pratos'
 import Product from '../Product'
 
 import { Container, List } from './styles'
@@ -6,7 +6,7 @@ import { Container, List } from './styles'
 export type Props = {
   title: string
   background: 'gray' | 'black'
-  games: Game[]
+  pratos: Prato[]
   showInfos?: boolean
   showEstrela?: boolean
   variant?: 'default' | 'categories'
@@ -15,7 +15,7 @@ export type Props = {
 export const ProductsList = ({
   background,
   title,
-  games,
+  pratos,
   showInfos = true,
   showEstrela = true,
   variant = 'default'
@@ -24,14 +24,14 @@ export const ProductsList = ({
     <div className="container">
       <h2>{title}</h2>
       <List variant={variant}>
-        {games.map((game) => (
+        {pratos.map((prato) => (
           <Product
-            key={game.id}
-            description={game.description}
-            image={game.image}
-            infos={game.infos}
-            title={game.title}
-            button={game.button}
+            key={prato.id}
+            description={prato.description}
+            image={prato.image}
+            infos={prato.infos}
+            title={prato.title}
+            button={prato.button}
             showInfos={showInfos}
             showEstrela={showEstrela}
             variant={variant}
