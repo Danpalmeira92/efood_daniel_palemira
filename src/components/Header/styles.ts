@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
-
 import bgImage from '../../assets/images/fundo.png'
 import bgVariant from '../../assets/images/apresentacao.png'
 import { Props } from '.'
