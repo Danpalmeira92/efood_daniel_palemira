@@ -3,7 +3,7 @@ import Prato from '../../models/Pratos'
 
 import pizza from '../../assets/images/pizza.png'
 import { ButtonLink } from '../../components/Button/styles'
-import { Estrela } from '../../components/Avaliacao/styles'
+
 import Header from '../../components/Header'
 
 const cardapio: Prato[] = [
@@ -13,8 +13,8 @@ const cardapio: Prato[] = [
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
-    avaliacao: Estrela,
-    infos: ['-10%', 'R$ 250,00'],
+    avaliacao: 0,
+    infos: [''],
     image: pizza,
     button: ButtonLink
   },
@@ -24,8 +24,8 @@ const cardapio: Prato[] = [
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
-    avaliacao: Estrela,
-    infos: ['-10%', 'R$ 250,00'],
+    avaliacao: 0,
+    infos: [''],
     image: pizza,
     button: ButtonLink
   },
@@ -35,8 +35,8 @@ const cardapio: Prato[] = [
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
-    avaliacao: Estrela,
-    infos: ['-10%', 'R$ 250,00'],
+    avaliacao: 0,
+    infos: [''],
     image: pizza,
     button: ButtonLink
   },
@@ -46,8 +46,8 @@ const cardapio: Prato[] = [
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
-    avaliacao: Estrela,
-    infos: ['-10%', 'R$ 250,00'],
+    avaliacao: 0,
+    infos: [''],
     image: pizza,
     button: ButtonLink
   },
@@ -57,8 +57,8 @@ const cardapio: Prato[] = [
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
-    avaliacao: Estrela,
-    infos: ['-10%', 'R$ 250,00'],
+    avaliacao: 0,
+    infos: [''],
     image: pizza,
     button: ButtonLink
   },
@@ -68,8 +68,8 @@ const cardapio: Prato[] = [
     description:
       'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     title: 'Pizza Marguerita',
-    avaliacao: Estrela,
-    infos: ['-10%', 'R$ 250,00'],
+    avaliacao: 0,
+    infos: [''],
     image: pizza,
     button: ButtonLink
   }
@@ -78,6 +78,7 @@ const cardapio: Prato[] = [
 const Categories = () => (
   <>
     <Header showTexto={false} variant={'categories'} />
+
     <ProductsList
       pratos={cardapio}
       title=""

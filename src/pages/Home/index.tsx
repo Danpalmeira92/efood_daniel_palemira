@@ -1,6 +1,7 @@
 import { ProductsList } from '../../components/ProductsList'
 import Prato from '../../models/Pratos'
 
+import sushi from '../../assets/images/sushi.png'
 import pratos from '../../assets/images/pratos.png'
 import { ButtonLink } from '../../components/Button/styles'
 import { Estrela } from '../../components/Avaliacao/styles'
@@ -10,11 +11,11 @@ const cardapio: Prato[] = [
   {
     id: 1,
     description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    title: 'La Dolce Vita Trattoria',
-    avaliacao: Estrela,
-    infos: ['Italiana'],
-    image: pratos,
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Experimente o Japão sem sair do lar com nosso delivery!',
+    title: 'Hioki Sushi',
+    avaliacao: 4.9,
+    infos: ['Destaque da semana', 'Japonesa'],
+    image: sushi,
     button: ButtonLink
   },
   {
@@ -23,7 +24,7 @@ const cardapio: Prato[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
-    avaliacao: Estrela,
+    avaliacao: 4.6,
     infos: ['Italiana'],
     image: pratos,
     button: ButtonLink
@@ -34,7 +35,7 @@ const cardapio: Prato[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
-    avaliacao: Estrela,
+    avaliacao: 4.6,
     infos: ['Italiana'],
     image: pratos,
     button: ButtonLink
@@ -45,7 +46,7 @@ const cardapio: Prato[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
-    avaliacao: Estrela,
+    avaliacao: 4.6,
     infos: ['Italiana'],
     image: pratos,
     button: ButtonLink
@@ -56,7 +57,7 @@ const cardapio: Prato[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
-    avaliacao: Estrela,
+    avaliacao: 4.6,
     infos: ['Italiana'],
     image: pratos,
     button: ButtonLink
@@ -67,7 +68,7 @@ const cardapio: Prato[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     title: 'La Dolce Vita Trattoria',
-    avaliacao: Estrela,
+    avaliacao: 4.6,
     infos: ['Italiana'],
     image: pratos,
     button: ButtonLink

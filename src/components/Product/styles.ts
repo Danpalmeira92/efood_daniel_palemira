@@ -5,17 +5,33 @@ import { Props } from './index'
 
 export const Card = styled.div<{ variant?: Props['variant'] }>`
   background-color: ${cores.cinza};
-  border-radius: 8px;
-  padding: 8px;
+  padding: ${(props) =>
+    props.variant === 'categories' ? '8px 8px 8px 8px' : '200px 8px 8px 8px'};
   position: relative;
+  overflow: hidden;
 
   ${TagContainer} {
     margin-right: 8px;
   }
+`
 
-  img {
-    border-radius: 6px;
-  }
+export const ImagemProduto = styled.img<{ variant?: Props['variant'] }>`
+  width: 100%;
+
+  ${(props) =>
+    props.variant === 'categories'
+      ? `
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      `
+      : `
+        position: absolute;
+        top: -8px;
+        left: 0;
+        z-index: 2;
+      `}
 `
 
 export const Titulo = styled.h3<{ variant?: Props['variant'] }>`
@@ -51,11 +67,14 @@ export const Infos = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
 `
 export const LinhaTitulo = styled.div<{ variant?: Props['variant'] }>`
   display: flex;
   align-items: center;
-  justify-content: space-between; /* controla o espaço */
+  justify-content: space-between;
   margin-top: 16px;
   margin-bottom: 8px;
 
@@ -66,4 +85,8 @@ export const LinhaTitulo = styled.div<{ variant?: Props['variant'] }>`
     margin-bottom: 4px;
 
       `}
+`
+export const WrapperProduto = styled.div`
+  position: relative;
+  width: 100%;
 `

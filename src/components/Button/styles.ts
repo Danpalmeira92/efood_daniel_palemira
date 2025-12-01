@@ -7,7 +7,6 @@ export const ButtonLink = styled(Link)`
   background-color: ${cores.salmon};
   padding: 6px 10px;
   margin-bottom: 16px;
-  border-radius: 8px;
   color: ${cores.cinza};
   font-size: 16px;
   font-weight: bold;
@@ -19,7 +18,6 @@ export const ButtonLinkVariant = styled(Link)`
   border: 2px solid ${cores.salmon};
   padding: 6px 10px;
   margin-bottom: 4px;
-  border-radius: 8px;
   text-align: center;
   color: ${cores.salmon};
   background-color: ${cores.begeClaro};

@@ -32,8 +32,9 @@ export const VariantHeaderTexto = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 32px;
+  justify-content: center;
+  gap: 600px;
+  padding: 24px;
 
   h4 {
     font-size: 18px;

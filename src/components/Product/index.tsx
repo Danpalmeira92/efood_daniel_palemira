@@ -3,7 +3,15 @@ import { ButtonLink, ButtonLinkVariant } from '../Button/styles'
 
 import Tag from '../Tag'
 
-import { Card, Descricao, Titulo, Infos, LinhaTitulo } from './styles'
+import {
+  Card,
+  Descricao,
+  Titulo,
+  Infos,
+  LinhaTitulo,
+  ImagemProduto,
+  WrapperProduto
+} from './styles'
 
 import estrela from '../../assets/images/estrela.png'
 
@@ -12,6 +20,7 @@ export type Props = {
   description: string
   infos: string[]
   image: string
+  avaliacao: number
   button: string
   showInfos?: boolean
   showEstrela?: boolean
@@ -23,12 +32,40 @@ const Product = ({
   description,
   infos,
   image,
+  avaliacao = 0,
   showInfos = true,
   showEstrela = true,
   variant = 'default'
 }: Props) => (
-  <Card variant={variant}>
-    <img src={image} alt={title} />
+  <WrapperProduto>
+    {variant !== 'categories' && (
+      <ImagemProduto variant={variant} src={image} alt={title} />
+    )}
+
+    <Card variant={variant}>
+      {variant === 'categories' && (
+        <ImagemProduto variant={variant} src={image} alt={title} />
+      )}
+
+      <LinhaTitulo variant={variant}>
+        <Titulo variant={variant}>{title}</Titulo>
+
+        {showEstrela && (
+          <Estrela>
+            {avaliacao} <img src={estrela} alt="estrela" />
+          </Estrela>
+        )}
+      </LinhaTitulo>
+
+      <Descricao>{description}</Descricao>
+
+      {variant === 'categories' ? (
+        <ButtonLinkVariant to="">Adicionar ao carrinho</ButtonLinkVariant>
+      ) : (
+        <ButtonLink to="/categories">Saiba mais</ButtonLink>
+      )}
+    </Card>
+
     {showInfos && (
       <Infos>
         {infos.map((info) => (
@@ -36,23 +73,7 @@ const Product = ({
         ))}
       </Infos>
     )}
-    <LinhaTitulo variant={variant}>
-      <Titulo variant={variant}>{title}</Titulo>
-      {showEstrela && (
-        <Estrela>
-          4.6 <img src={estrela} alt="estrela" />
-        </Estrela>
-      )}
-    </LinhaTitulo>
-
-    <Descricao>{description}</Descricao>
-
-    {variant === 'categories' ? (
-      <ButtonLinkVariant to="">Adicionar ao carrinho</ButtonLinkVariant>
-    ) : (
-      <ButtonLink to="/categories">Saiba mais</ButtonLink>
-    )}
-  </Card>
+  </WrapperProduto>
 )
 
 export default Product

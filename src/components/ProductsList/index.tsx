@@ -35,6 +35,7 @@ export const ProductsList = ({
             showInfos={showInfos}
             showEstrela={showEstrela}
             variant={variant}
+            avaliacao={prato.avaliacao}
           />
         ))}
       </List>
