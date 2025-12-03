@@ -57,7 +57,7 @@ const Product = ({
         )}
       </LinhaTitulo>
 
-      <Descricao>{description}</Descricao>
+      <Descricao variant={variant}>{description}</Descricao>
 
       {variant === 'categories' ? (
         <ButtonLinkVariant to="">Adicionar ao carrinho</ButtonLinkVariant>

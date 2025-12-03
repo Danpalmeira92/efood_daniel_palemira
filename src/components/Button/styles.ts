@@ -6,7 +6,7 @@ export const ButtonLink = styled(Link)`
   border: 2px solid ${cores.salmon};
   background-color: ${cores.salmon};
   padding: 6px 10px;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
   color: ${cores.cinza};
   font-size: 16px;
   font-weight: bold;

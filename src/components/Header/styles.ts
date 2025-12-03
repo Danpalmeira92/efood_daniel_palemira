@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import bgImage from '../../assets/images/fundo.png'
 import bgVariant from '../../assets/images/apresentacao.png'
 import { Props } from '.'
+import { cores } from '../../styles'
 
 export const HeaderBar = styled.header<{ variant?: Props['variant'] }>`
   background-image: url(${bgImage});
@@ -27,13 +28,29 @@ export const VariantBanner = styled.div`
   background-size: cover;
   background-position: center;
 `
+
+export const TituloBanner = styled.h2`
+  padding-top: 24px;
+  padding-bottom: 160px;
+  font-size: 32px;
+  font-weight: 100;
+  color: #fff;
+  opacity: 0.7;
+`
+
+export const TituloRestauranrte = styled.h2`
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+`
+
 export const VariantHeaderTexto = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 600px;
+  gap: 720px;
   padding: 24px;
 
   h4 {

@@ -4,7 +4,9 @@ import {
   HeaderBar,
   TextoBanner,
   VariantBanner,
-  VariantHeaderTexto
+  VariantHeaderTexto,
+  TituloBanner,
+  TituloRestauranrte
 } from './styles'
 
 import logo from '../../assets/images/logo.png'
@@ -44,7 +46,14 @@ const Header = ({ showTexto = true, variant = 'default' }: Props) => (
       )}
     </HeaderBar>
 
-    {variant === 'categories' && <VariantBanner />}
+    {variant === 'categories' && (
+      <VariantBanner>
+        <div className="container">
+          <TituloBanner>Italiana</TituloBanner>
+          <TituloRestauranrte>La Dolce Vita Trattoria</TituloRestauranrte>
+        </div>
+      </VariantBanner>
+    )}
   </>
 )
 

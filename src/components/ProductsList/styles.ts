@@ -31,6 +31,7 @@ export const List = styled.ul<{ variant?: Props['variant'] }>`
   column-gap: 48px;
   row-gap: 40px;
   margin-top: 40px;
+  margin-bottom: 64px;
 
   ${(props) =>
     props.variant === 'categories' &&
@@ -38,6 +39,8 @@ export const List = styled.ul<{ variant?: Props['variant'] }>`
       grid-template-columns: repeat(3, 1fr);
       column-gap: 24px;
       row-gap: 24px;
+      margin-bottom: 64px;
+      margin-top: 8px;
       `}
 `
 

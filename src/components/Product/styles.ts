@@ -38,13 +38,13 @@ export const Titulo = styled.h3<{ variant?: Props['variant'] }>`
   font-weight: bold;
   font-size: 16px;
   display: block;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 6px;
 
   ${(props) =>
     props.variant === 'categories' &&
     `
-      color: ${cores.cinza};
+      color: ${cores.begeClaro};
       margin-top: 2px;
       margin-bottom: 2px;
       `}
@@ -54,13 +54,13 @@ export const Descricao = styled.p<{ variant?: Props['variant'] }>`
   font-size: 14px;
   line-height: 22px;
   display: block;
-  margin-top: 16px;
   margin-bottom: 16px;
 
   ${(props) =>
     props.variant === 'categories' &&
     `
       margin-top: 0;
+      color: ${cores.begeClaro};
       `}
 `
 export const Infos = styled.div`
